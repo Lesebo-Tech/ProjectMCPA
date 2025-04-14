@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* New Color Scheme */
+        :root {
+            --dark: #182628;
+            --purple: #f35308;
+            --teal: #ee3119;
+            --green: #df2214;
+            --light: #F2F2F2;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex; /* Added flex for layout adjustments */
+            justify-content: space-between; /* Ensures items are spaced correctly */
+            align-items: center; /* Centers content vertically */
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin-left: auto; /* Moves links to the right */
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+        
+        nav a:hover {
+            color: var(--teal);
+        }
+        
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .faq-section {
+            position: relative;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        .background-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-container h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        
+        .faq-content {
+            padding: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, var(--purple) 0%, var(--green) 100%);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #e06f06 0%, #e05403 100%);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            .image-container h2 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="Pictures/iLogo.jpg" alt="Swift Ticket Logo" style="height: 50px;">
+            <h1 style="margin: 0;">Swift Ticket</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="about.html">Team Members</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+
+    <main>
+        <section class="faq-section"> 
+            <div class="image-container">
+                <img class="background-image" src="https://df1rpibhr7070.cloudfront.net/d4cb4a51-9263-447d-81dd-a4cebd38cde7" alt="FAQ Background">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-content">
+                <div class="faq-item">
+                    <div class="faq-question">What is your ticket refund policy?</div>
+                    <div class="faq-answer">
+                        Tickets can be refunded up to 48 hours before the event. A small processing fee may apply. For cancellations within 48 hours of the event, we offer credit for future events.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How will I receive my tickets?</div>
+                    <div class="faq-answer">
+                        All tickets are delivered digitally via email immediately after purchase. You can also access them through your Swift Ticket account or mobile app.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I transfer my ticket to someone else?</div>
+                    <div class="faq-answer">
+                        Yes! You can easily transfer tickets to friends through our app or website. Just go to "My Tickets" and select the "Transfer" option.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What payment methods do you accept?</div>
+                    <div class="faq-answer">
+                        We accept all major credit cards, PayPal, Apple Pay, Google Pay, and cryptocurrency (Bitcoin and Ethereum). Some events may also offer installment payment plans.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What if an event is cancelled?</div>
+                    <div class="faq-answer">
+                        In case of event cancellation, you'll automatically receive a full refund to your original payment method within 5-7 business days. We'll also notify you via email and SMS.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I contact customer support?</div>
+                    <div class="faq-answer">
+                        Our support team is available 24/7. Call us at (888) 555-7890, email support@swiftticket.com, or use the live chat in our app. Average response time is under 5 minutes!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Add interactive functionality to FAQ items
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                // Close other open items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

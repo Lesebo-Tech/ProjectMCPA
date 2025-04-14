@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Swift Ticket</title>
+    <style>
+        /* Consistent with your existing style */
+        :root {
+            --dark: #182628;
+            --purple: #ff5722;
+            --teal:#ff5722;
+            --green:#ff5722;
+            --light: #F2F2F2;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header - Consistent with other pages */
+        header {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+        nav ul li {
+             display: inline;
+            margin: 0 15px;
+        }
+
+
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* About Page Specific Styles */
+        .about-hero {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .about-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-hero h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            font-size: 3.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-section {
+            margin-bottom: 3rem;
+        }
+
+        .about-section h3 {
+            color: var(--purple);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .about-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--purple), var(--teal));
+        }
+
+        .about-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-info h4 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: var(--green);
+            font-weight: 500;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .stat-box h4 {
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box p {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* Footer - Consistent with other pages */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .about-hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Consistent Header -->
+    <header>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="Pictures/iLogo.jpg" alt="Swift Ticket Logo" style="height: 50px;">
+            <h1 style="margin: 0;">Swift Ticket</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="about.html">Team Members</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+
+    <!-- About Page Content -->
+    <main>
+        <section class="about-hero">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Concert crowd">
+            <h2>Our Story</h2>
+        </section>
+
+        <div class="about-content">
+            <section class="about-section">
+                <h3>Who We Are</h3>
+                <p>Founded in 2025, Swift Ticket has revolutionized the way people discover and book tickets for events. What started as a small startup in Durban has grown into South Africa's most trusted ticketing platform, serving over 500,000 happy customers.</p>
+                <p>Our mission is simple: to connect people with unforgettable experiences while providing the most seamless booking process in the industry.</p>
+            </section>
+
+            <section class="about-section">
+                <h3>Why Choose Us</h3>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h4>500K+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>10K+</h4>
+                        <p>Events Hosted</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>24/7</h4>
+                        <p>Customer Support</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>98%</h4>
+                        <p>Positive Reviews</p>
+                    </div>
+                </div>
+                <p>We pride ourselves on offering:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li>Instant digital ticket delivery</li>
+                    <li>Lowest prices guaranteed</li>
+                    <li>Easy ticket transfers</li>
+                    <li>Flexible refund options</li>
+                    <li>Exclusive VIP experiences</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h3>Our Promise</h3>
+                <p>When you choose Swift Ticket, you're not just buying a ticket - you're investing in an experience. We carefully vet all events and venues to ensure they meet our high standards for safety, production quality, and overall attendee experience.</p>
+                <p>Have questions about an upcoming event? Our 24/7 customer support team is always ready to help via phone, email, or live chat.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Consistent Footer -->
+    <footer>
+        <p>&copy; 2025 Swift Ticket. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">Making event experiences seamless since 2020</p>
+    </footer>
+</body>
+</html>

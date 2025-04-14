@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Ticket - Home</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    /* New Color Scheme */
+    :root {
+        --dark: #182628;
+        --purple: #650CBB;
+        --teal: #57BA9B;
+        --green: #3B945E;
+        --light: #F2F2F2;
+    }
+    
+    body {
+        background-color: var(--light);
+        color: var(--dark);
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: var(--dark);
+        color: white;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0;
+    }
+    
+    nav a:hover {
+        color: var(--teal);
+    }
+    
+    main {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .faq-section {
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .image-container {
+        position: relative;
+        width: 100%;
+    }
+    
+    .background-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .image-container h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+    
+    .faq-content {
+        padding: 20px;
+    }
+    
+    /* Enhanced FAQ Items */
+    
+    
+    @media (max-width: 768px) {
+        .image-container h2 {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        header {
+            padding: 1rem;
+        }
+    }
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="Pictures/iLogo.jpg" alt="Swift Ticket Logo" style="height: 50px;">
+            <h1 style="margin: 0;">Swift Ticket</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="about.html">Team Members</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="image-container">
+            <img class="background-image" src="https://df1rpibhr7070.cloudfront.net/d4cb4a51-9263-447d-81dd-a4cebd38cde7" alt="FAQ Background">
+            <h2>Book Your Next Event with Swift!</h2>
+        </div>
+        
+    </section>
+    <section class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-container">
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0007.jpg" alt="Concert">
+                <h3>Pass Over</h3>
+                <p>Date: April 06, 2025</p>
+                <p>Location: Durban</p>
+                <a href="book.html" class="btn book-btn" 
+                   data-name="Pass Over"
+                   data-date="May 04, 2025"
+                   data-location="Umhlanga"
+                   data-description="Prasing the lord!"
+                   data-general-price="150"
+                   data-vip-price="300"
+                   data-vvip-price="800">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0006.jpg" alt="Concert">
+                <h3>Danki Gqom Fest</h3>
+                <p>Date: Aplril 03, 2025</p>
+                <p>Location: Umlazi</p>
+                <a href="book.html" class="btn book-btn" 
+                   data-name="New Years Eve"
+                   data-date="May 04, 2025"
+                   data-location="Max's Lifestyle"
+                   data-description="Gqom Fest!!!"
+                   data-general-price="150"
+                   data-vip-price="350"
+                   data-vvip-price="600">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0004.jpg" alt="Concert">
+                <h3>Garden Route Tour</h3>
+                <p>Date: November 03, 2025</p>
+                <p>Location: Durban</p>
+                <a href="book.html" class="btn book-btn" 
+                   data-name="Garden Route Tour"
+                   data-date="November 03, 2025"
+                   data-location="Botanic Garden"
+                   data-description="Bloom Season"
+                   data-general-price="200"
+                   data-vip-price="350"
+                   data-vvip-price="600">Book Now</a>
+            </div>
+        </div>
+        <!--<div class="event-container">
+            <div class="event">
+                <img src="Pictures/nye.jpg" alt="Concert">
+                <h3>New Years Eve</h3>
+                <p>Date: March 15, 2025</p>
+                <p>Location: Durban</p>
+                <a href="cart.html" class="btn" onclick="addToCart('New Years Eve', 100)">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/murumba.jpg" alt="Murumba">
+                <h3>Murumba Pitch</h3>
+                <p>Date: April 5, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/mgilane.jpg" alt="Mgilane Festival">
+                <h3>Siyaphothula</h3>
+                <p>Date: April 25, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0002.jpg" alt="meet and grill">
+                <h3>Meet and Grill</h3>
+                <p>Date: April 12, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+            
+           
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0005.jpg" alt="Durban">
+                <h3>Surtaday Bang</h3>
+                <p>Date: June 5, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0006.jpg" alt="Durban">
+                <h3>Danki Gqom Fest</h3>
+                <p>Date: May 03, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+            <div class="event">
+                <img src="Pictures/IMG-20250403-WA0007.jpg" alt="Durban">
+                <h3>Pass Over</h3>
+                <p>Date: May 6, 2025</p>
+                <a href="book.html" class="btn">Book Now</a>
+            </div>
+        </div>-->
+        <button class="prev-btn">&#10094;</button> <!-- Left Arrow -->
+        <button class="next-btn">&#10095;</button> <!-- Right Arrow -->
+    </section>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+    // Handle book now clicks
+    document.querySelectorAll('.book-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get event data from data attributes
+            const eventData = {
+                name: this.dataset.name,
+                date: this.dataset.date,
+                location: this.dataset.location,
+                description: this.dataset.description,
+                prices: {
+                    general: this.dataset.generalPrice,
+                    vip: this.dataset.vipPrice,
+                    vvip: this.dataset.vvipPrice
+                }
+            };
+            
+            // Store in sessionStorage
+            sessionStorage.setItem('currentEvent', JSON.stringify(eventData));
+            
+            // Redirect to booking page
+            window.location.href = this.getAttribute('href');
+        });
+    });
+});
+        /*document.addEventListener("DOMContentLoaded", function () {
+            const prevBtn = document.querySelector(".prev-btn");
+            const nextBtn = document.querySelector(".next-btn");
+            const eventContainer = document.querySelector(".event-container");
+    
+            // Scroll Left
+            prevBtn.addEventListener("click", function () {
+                eventContainer.scrollBy({ left: -300, behavior: "smooth" });
+            });
+    
+            // Scroll Right
+            nextBtn.addEventListener("click", function () {
+                eventContainer.scrollBy({ left: 300, behavior: "smooth" });
+            });
+        });*/
+    </script>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Swift Ticket. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
